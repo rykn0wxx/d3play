@@ -4,12 +4,15 @@
   "private": true,
   "author": "rykn0wxx <raurici666@gmail.com>",
   "scripts": {
-    "serve": "vue-cli-service serve --port=8181 --noInfo true --progress false",
+    "serve": "vue-cli-service serve --port=8181 --noInfo=true --progress=false",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "crossfilter2": "^1.5.0",
+    "d3": "^5.14.2",
+    "dc": "^3.1.8",
     "lodash": "^4.17.15",
     "vue": "^2.6.10",
     "vue-meta": "^2.3.1",

@@ -2,15 +2,7 @@
 export default {
   name: 'AppContent',
   props: {
-    tag: {
-      type: String,
-      default: 'main'
-    },
     contentClass: {
-      type: String,
-      default: ''
-    },
-    wrapClass: {
       type: String,
       default: ''
     }
@@ -29,18 +21,10 @@ export default {
   render(h) {
     const data = {
       // style: this.styles,
-      staticClass: `v-content app-content ${this.contentClass}`,
+      staticClass: `app-content layout-row flex ${this.contentClass}`,
       ref: 'content'
     }
-    return h(this.tag, data, [
-      h(
-        'div',
-        {
-          staticClass: `v-content__wrap app-content__wrap tw-relative ${this.wrapClass}`
-        },
-        this.$slots.default
-      )
-    ])
+    return h('div', data, this.$slots.default)
   }
 }
 </script>

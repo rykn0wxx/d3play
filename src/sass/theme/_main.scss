@@ -1,3 +1,5 @@
+@import './layout';
+
 .rykn0wxx {
   &,
   .mudhead {
@@ -5,7 +7,8 @@
     background-color: $background-color;
   }
   .shadow-z1 {
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14), 0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14),
+      0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084);
   }
   /***************
   * TYPE DEFAULTS
@@ -59,6 +62,7 @@
   ul {
     margin: 0;
     padding: 0;
+    list-style: none;
     li {
       margin-left: 16px;
       padding: 0;
@@ -70,3 +74,5 @@
     }
   }
 }
+
+@include layouts_for_breakpoint();

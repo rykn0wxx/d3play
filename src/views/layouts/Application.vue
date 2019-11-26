@@ -1,11 +1,14 @@
 <template>
-  <div class="layouts-application flex layout-row tw-flex tw-max-w-full tw-max-h-full tw-overflow-hidden">
-    <div dark class="layouts-app tw-w-full">
-      <g-app-content contentClass="tw-h-full img-placeholder" wrapClass="tw-overflow-auto">
-        <GAppView class="tw-flex-noshrink view-wrapper tw-relative tw-block tw-h-full" />
-      </g-app-content>
+  <g-app-wrapper>
+    <div class="app-toolbar layout-row">
+      toolbar here
     </div>
-  </div>
+    <g-app-content>
+      <div class="layout-column flex">
+        <RouterView class="app-view" />
+      </div>
+    </g-app-content>
+  </g-app-wrapper>
 </template>
 
 <script>

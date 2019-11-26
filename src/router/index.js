@@ -10,7 +10,9 @@ import scrollBehavior from './scroll-behavior'
 import routerPaths from './router-paths'
 import routeGenerator from './route-generator'
 
-const appRoutes = routerPaths.map(path => routeGenerator(path)).concat([{ path: '*', redirect: '/home' }])
+const appRoutes = routerPaths
+  .map(path => routeGenerator(path))
+  .concat([{ path: '*', redirect: '/home' }])
 
 Vue.use(Router)
 
