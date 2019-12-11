@@ -19,28 +19,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/components/global'
+import { createVuetify } from './plugins/vuetify'
 
 // Application implementation
-// const appVuetify = function() {
-//   const myVuetify = new Vuetify({
-//     theme: {
-//       themes: {
-//         light: {
-//           primary: '#1867C0',
-//           secondary: '#5CBBF6',
-//           tertiary: '#E57373',
-//           accent: '#005CAF'
-//         }
-//       }
-//     }
-//   })
-//   return myVuetify
-// }
-// const ownVuetify = appVuetify()
-
-// Vue.use(Vuetify, {})
-// console.log(Vuetify)
 sync(store, router)
+const vuetify = createVuetify({
+  theme: { dark: true }
+})
 Vue.use(Vs)
 Vue.use(VD3)
 Vue.config.productionTip = false
@@ -49,5 +34,6 @@ new Vue({
   router,
   store,
   mixins: [meta],
+  vuetify,
   render: h => h(App)
 }).$mount('#app')

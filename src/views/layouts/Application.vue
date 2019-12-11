@@ -1,14 +1,16 @@
 <template>
-  <g-app-wrapper>
-    <div class="app-toolbar layout-row">
-      toolbar here
-    </div>
-    <g-app-content>
-      <div class="layout-column flex">
-        <RouterView class="app-view" />
+  <v-app>
+    <g-app-wrapper>
+      <div class="app-toolbar layout-row">
+        toolbar here
       </div>
-    </g-app-content>
-  </g-app-wrapper>
+      <g-app-content>
+        <div class="layout-column flex">
+          <RouterView class="app-view" />
+        </div>
+      </g-app-content>
+    </g-app-wrapper>
+  </v-app>
 </template>
 
 <script>
