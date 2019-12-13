@@ -16,6 +16,12 @@ export default [
         name: 'About',
         view: 'pages/About',
         icon: 'info'
+      },
+      {
+        path: '/other',
+        name: 'Other',
+        view: 'pages/Other',
+        icon: 'info'
       }
     ]
   }

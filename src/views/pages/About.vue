@@ -20,7 +20,7 @@
       </table>
     </div>
     <div class="forchart">
-      <Basic :chartData="chartData" />
+      <Basic :ds="chartData" />
     </div>
   </div>
 </template>
@@ -66,7 +66,7 @@ export default {
   mounted() {
     this.$nextTick(function() {
       this.loadData()
-      console.log(this)
+      console.log(this.$vuuid())
     })
   }
 }

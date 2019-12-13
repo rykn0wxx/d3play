@@ -2,7 +2,17 @@
   <v-app>
     <g-app-wrapper>
       <div class="app-toolbar layout-row">
-        toolbar here
+        <ul class="nav">
+          <li>
+            <router-link to="/home">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/other">Other</router-link>
+          </li>
+        </ul>
       </div>
       <g-app-content>
         <div class="layout-column flex">
@@ -19,4 +29,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav {
+  display: flex;
+  width: 100%;
+  li {
+    padding: 10px;
+  }
+}
+</style>

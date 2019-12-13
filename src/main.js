@@ -6,7 +6,7 @@
 import Vue from 'vue'
 
 // Application plugins
-// import Vuetify from 'vuetify'
+import vuuid from './plugins/vuuid'
 import Vs from 'd3-vs'
 import { sync } from 'vuex-router-sync'
 import meta from '@/plugins/meta'
@@ -26,6 +26,7 @@ sync(store, router)
 const vuetify = createVuetify({
   theme: { dark: true }
 })
+Vue.use(vuuid)
 Vue.use(Vs)
 Vue.use(VD3)
 Vue.config.productionTip = false

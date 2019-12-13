@@ -29,8 +29,9 @@ const VD3 = {}
 // }
 
 VD3.install = function(Vue, options) {
-  Vue.prototype.$vd3 = d3
+  // Vue.prototype.$vd3 = d3
   // init()
+  Object.defineProperty(Vue.prototype, '$d3', { value: d3 })
   if (typeof window !== 'undefined') {
     window.VD3 = VD3
     window.$D3 = d3
