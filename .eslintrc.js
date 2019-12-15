@@ -12,7 +12,17 @@ module.exports = {
     'no-undef': 'off',
     'no-useless-return': 0,
     'vue/require-prop-type-constructor': 0,
-    camelcase: 'off'
+    camelcase: 'off',
+    'max-len': [ 'error', 250, 4, {
+        ignoreUrls: true,
+        ignoreTemplateLiterals: true,
+        ignoreStrings: true
+      }
+    ],
+    indent: ['error', 2, { flatTernaryExpressions: false }],
+    // 'array-bracket-newline': 0,
+    // 'array-element-newline': 0,
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }]
   },
   parserOptions: {
     parser: 'babel-eslint'

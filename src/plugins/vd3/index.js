@@ -20,25 +20,15 @@
 
 import * as d3 from 'd3'
 
-const VD3 = {}
-
-// function init() {
-//   if (typeof window !== 'undefined' && window.Vue) {
-//     console.log(window)
-//   }
-// }
-
-VD3.install = function(Vue, options) {
-  // Vue.prototype.$vd3 = d3
-  // init()
-  Object.defineProperty(Vue.prototype, '$d3', { value: d3 })
-  if (typeof window !== 'undefined') {
-    window.VD3 = VD3
-    window.$D3 = d3
-    if (window.Vue) {
-      window.Vue.use(VD3)
-    }
+const VD3 = {
+  install(Vue, options) {
+    const _d3 = d3
+    Vue.prototype.$d3 = _d3
   }
+}
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(VD3)
 }
 
 export default VD3

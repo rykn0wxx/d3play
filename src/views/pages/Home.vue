@@ -71,10 +71,7 @@ export default {
     }
   },
   methods: {
-    init() {
-      // this.$nextTick(this.drawChart)
-      console.log(this)
-    },
+    init() {},
     drawChart() {
       const canva = d3.select(this.$el)
       const svgRoot = canva

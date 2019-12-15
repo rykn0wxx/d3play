@@ -24,11 +24,13 @@
             :y="r.y"
             :x="r.x"
             :fill="r.fill"
-            @mouseenter="handleMouseEnter($event, r)"
+            @mouseenter.prevent="handleMouseEnter($event, r)"
             @mousemove="handleMouseMove($event, r)"
             @mouseleave="handleMouseLeave($event, r)"
+            rx="4"
+            ry="4"
             class="bar"
-            opacity="1"
+            opacity="0.8"
           />
         </transition-group>
         <g
@@ -185,13 +187,12 @@ export default {
       return this.opts.svgDim.h - d.x - this.margin.b
     },
     handleMouseEnter(e, d) {
-      d.fill = d3
-        .color(d.fill)
-        .brighter(10)
-        .formatHex()
-      console.log(d)
+      d3.select(e.target)
+        .transition(this.barTransition)
+        .attr('opacity', 0.8)
     },
     handleMouseMove(e, d) {
+      console.log(d3.mouse(e.target))
       console.log('handleMouseMove')
     },
     handleMouseLeave(e, d) {

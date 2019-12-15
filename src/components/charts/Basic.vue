@@ -19,8 +19,8 @@
           :fill="opts.fill"
         >
           <rect
-            v-for="(b, i) in bars"
-            :key="i"
+            v-for="b in bars"
+            :key="b.id"
             :height="b.height"
             :width="b.width"
             :y="b.y"
@@ -172,7 +172,8 @@ export default {
           width: this.xScale.bandwidth(),
           x: this.xScale(this.xValue(d)),
           y: this.yScale(this.yValue(d)),
-          d: d
+          d: d,
+          id: this.$vuuid().slice(0, 8)
         }
       })
     }

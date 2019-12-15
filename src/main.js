@@ -19,6 +19,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/components/global'
+import '@/components/visuals'
 import { createVuetify } from './plugins/vuetify'
 
 // Application implementation
